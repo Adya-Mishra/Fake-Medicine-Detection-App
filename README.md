@@ -36,12 +36,12 @@ The Fake Medicine Detection App is a machine learning-powered application design
 
 - Install Dependencies:
 
-      bash
+  ```bash
       pip install -r requirements.txt
 
 - Run the App:
 
-      bash
+  ```bash
       streamlit run login_page.py
 
 ## Usage
