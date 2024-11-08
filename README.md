@@ -14,7 +14,6 @@ The Fake Medicine Detection App is a machine learning-powered application design
 - Getting Started
 - Usage
 - File Descriptions
-- Future Improvements
 - License
   
 ## Technologies Used
