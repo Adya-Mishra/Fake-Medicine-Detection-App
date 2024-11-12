@@ -2,13 +2,13 @@
 
 import codecs
 import streamlit as st
-import mysql.connector
+import pymysql  # Replace mysql.connector with pymysql
 import bcrypt
 import base64
 from streamlit_extras.switch_page_button import switch_page
 
-# MySQL Connection
-db = mysql.connector.connect(
+# MySQL Connection using PyMySQL
+db = pymysql.connect(
     host="localhost",
     user="root",
     password="Abc@1234567890",
@@ -92,7 +92,7 @@ if choice == "Sign Up":
         try:
             create_account(new_email, new_password)
             st.success("Account created successfully! Now you can log in.")
-        except mysql.connector.Error as err:
+        except pymysql.MySQLError as err:  # Update to handle PyMySQL errors
             st.error(f"Error: {err}")
         except Exception as e:
             st.error(f"An unexpected error occurred: {e}")
@@ -114,4 +114,3 @@ if st.session_state.user_logged_in:
     if st.button("Logout"):
         st.session_state.user_logged_in = False
         st.success("Logged out successfully.")
-
