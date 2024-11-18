@@ -84,7 +84,7 @@ if choice == "Extract text from images":
 
     if sub_choice == "Capture Image with Camera":
         st.write("# See a new image every second")
-        controls = st.checkbox("Show controls")  # Show controls button to pause the video
+        controls = st.checkbox("Show controls") 
         image = camera_input_live(show_controls=controls)
 
         if image is not None:

@@ -17,3 +17,4 @@ streamlit_camera_input_live==0.2.0
 streamlit_extras==0.5.0
 torch==2.5.1
 tqdm==4.67.0
+scikit-learn

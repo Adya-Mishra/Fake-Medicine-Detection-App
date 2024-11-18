@@ -2,7 +2,7 @@
 
 import codecs
 import streamlit as st
-import pymysql  # Replace mysql.connector with pymysql
+import pymysql  
 import bcrypt
 import base64
 from streamlit_extras.switch_page_button import switch_page

@@ -15,7 +15,6 @@ import streamlit as st
 import torch
 from PIL import Image
 import zipfile
-import shutil
 
 # Set device
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -25,12 +24,12 @@ reader = easyocr.Reader(['en'])
 stop_words = set(stopwords.words("english"))
 
 # Google Drive file IDs
-CSV_FILE_ID = "1-eFFOJ4CSFAmIW607JIo2JVGt2aH4BE-"  # ID for cleaned_medicine.csv
-MODEL_FOLDER_ID = "1FjDkMYYbFlgzXLueAR2qCMVn7jtKJOie"  # ID for the my_saved_model folder (should be a zip file)
+CSV_FILE_ID = "1-eFFOJ4CSFAmIW607JIo2JVGt2aH4BE-" 
+MODEL_FOLDER_ID = "1FjDkMYYbFlgzXLueAR2qCMVn7jtKJOie" 
 
 # Local paths
 CSV_PATH = "fraud_platform_imen/data/cleaned_medicine_data.csv"
-MODEL_FOLDER_PATH = "my_saved_model"  # Path for the entire model folder
+MODEL_FOLDER_PATH = "my_saved_model" 
 
 # Function to download file if needed
 def download_file_if_needed(file_id, destination):
